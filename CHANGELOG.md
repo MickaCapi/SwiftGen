@@ -13,18 +13,29 @@ _None_
 * Added a `storyboards-osx-swift3` template.  
   [Felix Lisczyk](https://github.com/FelixII)
   [#225](https://github.com/AliSoftware/SwiftGen/pull/225)
-* Added a `strings-no-comments-swift3` template that does not include the default translation of each key.  
+* Added a `strings-no-comments-swift3` template that does not include the
+  default translation of each key.  
   [Loïs Di Qual](https://github.com/ldiqual)
   [#222](https://github.com/AliSoftware/SwiftGen/issues/222)
-* Images: new dot-syntax template, use `dot-syntax-swift3` or `dot-syntax` (for Swift 2.3).  
+* Images: new dot-syntax template, use `dot-syntax-swift3` or `dot-syntax` (for
+  Swift 2.3).  
   [David Jennes](https://github.com/djbe)
   [#206](https://github.com/AliSoftware/SwiftGen/pull/206)
+* Reworked the "dot-syntax" and "structured" templates to use the new `define`
+  and `call` tags, which greatly simplifies the templates, and also removes the
+  limitation of 5-level deep structures.  
+  [David Jennes](https://github.com/djbe)
+  [#237](https://github.com/AliSoftware/SwiftGen/pull/237)
 
 ### Internal changes
 
 * Better error handling in the `colors` command.  
   [David Jennes](https://github.com/djbe)
   [#227](https://github.com/AliSoftware/SwiftGen/pull/227)
+* Stencil: added two new tags `define` and `call`, see the documentation for in
+  depth explanations on how to use them.  
+  [David Jennes](https://github.com/djbe)
+  [#237](https://github.com/AliSoftware/SwiftGen/pull/237)
 
 ## 4.0.1
 
@@ -36,7 +47,8 @@ _None_
 * Fix broken `import` option added in 4.0.0.  
   [David Jennes](https://github.com/djbe)
   [#214](https://github.com/AliSoftware/SwiftGen/pull/214)
-* Show an error when the provided path to the `images` command is not an asset catalog.  
+* Show an error when the provided path to the `images` command is not an asset
+  catalog.  
   [David Jennes](https://github.com/djbe)
   [#217](https://github.com/AliSoftware/SwiftGen/pull/217)
 * Strings dot-syntax template: use `enum`s for namespacing instead of `struct`s.  
