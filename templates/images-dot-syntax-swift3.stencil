@@ -32,22 +32,22 @@ struct {{enumName}}Type: ExpressibleByStringLiteral {
     self.init(stringLiteral: value)
   }
 }
-{% define recursiveBlock images tb %}
-{{args.tb}}  {% for image in args.images %}
-{{args.tb}}  {% ifnot image.items %}
-{{args.tb}}  static let {{image.name|swiftIdentifier|snakeToCamelCase|lowerFirstWord}}: AssetType = "{{image.value}}"
-{{args.tb}}  {% else %}
-{{args.tb}}  enum {{image.name|swiftIdentifier|titlecase|snakeToCamelCase}} {
-{{args.tb}}    {% set tb %}{{args.tb}}  {% endset %}
-{{args.tb}}    {% call recursiveBlock image.items tb %}
-{{args.tb}}  }
-{{args.tb}}  {% endif %}
-{{args.tb}}  {% endfor %}
-{% enddefine %}
+{% func recursiveBlock images sp %}
+{{args.sp}}  {% for image in args.images %}
+{{args.sp}}  {% ifnot image.items %}
+{{args.sp}}  static let {{image.name|swiftIdentifier|snakeToCamelCase|lowerFirstWord}}: AssetType = "{{image.value}}"
+{{args.sp}}  {% else %}
+{{args.sp}}  enum {{image.name|swiftIdentifier|titlecase|snakeToCamelCase}} {
+{{args.sp}}    {% set sp %}{{args.sp}}  {% endset %}
+{{args.sp}}    {% call recursiveBlock image.items sp %}
+{{args.sp}}  }
+{{args.sp}}  {% endif %}
+{{args.sp}}  {% endfor %}
+{% endfunc %}
 
 // swiftlint:disable type_body_length
 enum {{enumName}} {
-  {% call recursiveBlock structuredImages tb %}
+  {% call recursiveBlock structuredImages sp %}
 }
 // swiftlint:enable type_body_length
 
