@@ -58,6 +58,7 @@
 		C2116840B511556D7BA0EFAF0C96584D /* PathKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 357D15260F4F08A5E5C1A115C43E76F3 /* PathKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D4624BABA160B7AAD530DA6030101CA1 /* Pods-swiftgen-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DD227BB696CD77975C6977ABFE31498D /* Pods-swiftgen-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D5E515658B53A657B8C05DD53CE75717 /* ArgumentParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF6C77AD45C6DD8B6F9724E372F3DF8B /* ArgumentParser.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		DD500B4A1DFDB983007F57D6 /* CallNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD500B491DFDB983007F57D6 /* CallNode.swift */; };
 		DD6FE157AFFC4F55B4F09DF38670EBF4 /* SetNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891702612CB14D7A3F94A812C9A331FB /* SetNode.swift */; };
 		E003B945E3FF50368DBCA8316EB30279 /* IfTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBC89DE5240C350081F251F70AD9A3A /* IfTag.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		E6B155DC32B24BA9AD4BF85877CDA30B /* Include.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF79D983122DB2473E1D54EA6A92F655 /* Include.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
@@ -215,6 +216,7 @@
 		DBCC6B5A98866F9AB08075B7EAD95C79 /* Group.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Group.swift; path = Sources/Group.swift; sourceTree = "<group>"; };
 		DD227BB696CD77975C6977ABFE31498D /* Pods-swiftgen-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-swiftgen-umbrella.h"; sourceTree = "<group>"; };
 		DD3A19C38ECDD8AB575A2A60409325C6 /* Commander-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Commander-dummy.m"; sourceTree = "<group>"; };
+		DD500B491DFDB983007F57D6 /* CallNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CallNode.swift; sourceTree = "<group>"; };
 		DDCC6EB795A1BBCE5836BBC5F172CF71 /* Commander.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Commander.xcconfig; sourceTree = "<group>"; };
 		DEE10F9FC417D3BE64F67E0C73AE2117 /* Pods-UnitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-UnitTests.release.xcconfig"; sourceTree = "<group>"; };
 		E02AF300527C4A93DF87EB074EA18BD1 /* CommandRunner.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CommandRunner.swift; path = Sources/CommandRunner.swift; sourceTree = "<group>"; };
@@ -424,6 +426,7 @@
 		70D72D5FD994F2AF338BC99DD390EF09 /* Stencil */ = {
 			isa = PBXGroup;
 			children = (
+				DD500B491DFDB983007F57D6 /* CallNode.swift */,
 				A8CA12B6EFDECB31273CB5138CDDF0F7 /* Contexts.swift */,
 				B14F0AE2431292003B3107A5FE13589E /* Filters.swift */,
 				5BC99DDE3E6B233C556A47C1D2CFBB70 /* GenumTemplate.swift */,
@@ -789,6 +792,7 @@
 				DD6FE157AFFC4F55B4F09DF38670EBF4 /* SetNode.swift in Sources */,
 				B7614839675AA56DE90F3AFC404C6A0E /* StoryboardParser.swift in Sources */,
 				A7AD4BEEB54870E11583118D122C71F1 /* StringsFileParser.swift in Sources */,
+				DD500B4A1DFDB983007F57D6 /* CallNode.swift in Sources */,
 				11711E80AA6C885AD73615BABD2FC384 /* SwiftIdentifier.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
